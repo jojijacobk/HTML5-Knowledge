@@ -281,3 +281,18 @@ function fileUploadHandler(ev) {
 }
 export default fileUploadHandler;
 ```
+# Drag & Drop
+- set attribute `draggable="true"` to any html5 tag to make it draggable
+- add event listeners to draggable elements
+  - `dragstart` - when dragged elemnt starts moving 
+  - `dragend` - when dragged elment is dropped either inside or outside drop target
+- add event listeners to drop target element
+  - `dragenter` - when dragged element enters drop target
+  - `dragleave` when dragged element leaves drop target boundary
+  - `dragover` while dragged element is hovered over drop target
+  - `drop` - when dragged element is dropped inside drop target
+- Set data to be attached when an element is dragged
+  - `event.dataTransfer.setData('text/plain', 'my data'); // (mime, data)
+- Get data configured on dragged element when that element is dropped
+  - `event.dataTransfer.getData('text/plain');
+  
