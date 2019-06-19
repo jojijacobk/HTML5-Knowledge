@@ -295,8 +295,11 @@ export default fileUploadHandler;
   - `event.dataTransfer.setData('text/plain', 'my data'); // (mime, data)`
 - Get data configured on dragged element when that element is dropped
   - `event.dataTransfer.getData('text/plain');`
-  
+
+
 ```javascript
+// Code sample 
+
 const draggableElements = document.querySelectorAll('#draggableItemsSection img');
 const dropTarget = document.querySelector('#droppableSection');
 
@@ -318,4 +321,9 @@ dropTarget.addEventListener('drop', ev => {
   dropTarget.appendChild(document.getElementById(draggedElementId));
   this.stopDefaultBehavior(ev);
 });
+
+stopDefaultBehavior(ev) {
+  ev.stopImmediatePropagation();
+  ev.preventDefault();
+}
 ```
