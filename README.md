@@ -55,8 +55,9 @@ With the advent of HTML5, semantics of elements used to construct a web page gat
 |<img src="attachments/01.png" width="650"> |
 
 <details>
+  <summary>Example</summary>
   
-|Detailed example of semantical page structure|
+|Example|
 |------|
 |A detailed sample of a good page structure|
 |<img src="attachments/02.png" width="650"> |
