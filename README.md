@@ -327,3 +327,16 @@ stopDefaultBehavior(ev) {
   ev.preventDefault();
 }
 ```
+# History API
+- HTML5 introduced `window.history` API which let's JavaScript to access the history of pages visited on a browser under same website domain.
+- It doesn't allow you to access history of other website domains.
+- `history` object has the following methods
+  - `history.back()`
+  - `history.forward()`
+  - `history.go(index)`
+    - positive index calls forward() function _index_ number of times
+    - negative index calls back() function _index_ number of times
+  - `history.pushState(stateObject, title, URL)` - adds URL to the top of history stack
+  - `history.replaceState(stateObject, title, URL)` - replaces current element in history with the new URL
+- history change fires `popstate` event. This is fired only when either a `back()` or `forward()` or `go()` is called. When `pushState()` or `replaceState()` happens, this event is not fired.
+- When `back()` or `forward()` or `go()` is called, the location.href value (address bar URL) is updated but actual content for that URL is not loaded. So, you will have to call content via AJAX by listening to `popstate` event.
