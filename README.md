@@ -292,7 +292,30 @@ export default fileUploadHandler;
   - `dragover` while dragged element is hovered over drop target
   - `drop` - when dragged element is dropped inside drop target
 - Set data to be attached when an element is dragged
-  - `event.dataTransfer.setData('text/plain', 'my data'); // (mime, data)
+  - `event.dataTransfer.setData('text/plain', 'my data'); // (mime, data)`
 - Get data configured on dragged element when that element is dropped
-  - `event.dataTransfer.getData('text/plain');
+  - `event.dataTransfer.getData('text/plain');`
   
+  ```javascript
+      const draggableElements = document.querySelectorAll('#draggableItemsSection img');
+      const dropTarget = document.querySelector('#droppableSection');
+
+      draggableElements.forEach(img => {
+        img.addEventListener('dragstart', ev => {
+          ev.dataTransfer.setData('text/plain', ev.target.id);
+        });
+      });
+
+      dropTarget.addEventListener('dragenter', ev => {
+        this.stopDefaultBehavior(ev);
+      });
+      dropTarget.addEventListener('dragover', ev => {
+        this.stopDefaultBehavior(ev);
+      });
+      dropTarget.addEventListener('drop', ev => {
+        const draggedElementId = ev.dataTransfer.getData('text/plain');
+        console.log(' ⚡️', draggedElementId);
+        dropTarget.appendChild(document.getElementById(draggedElementId));
+        this.stopDefaultBehavior(ev);
+      });
+  ```
