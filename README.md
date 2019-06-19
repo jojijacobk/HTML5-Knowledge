@@ -53,11 +53,15 @@ With the advent of HTML5, semantics of elements used to construct a web page gat
 |------|
 |An example of a good page structure|
 |<img src="attachments/01.png" width="650"> |
+
+<details>
+|Detailed example of semantical page structure|
+|------|
 |A detailed sample of a good page structure|
 |<img src="attachments/02.png" width="650"> |
 |A detailed sample of a bad page structure|
 |<img src="attachments/03.png" width="650"> |
-
+</details>
 Some of the new HTML5 semantic elements are:
 - `<figure>`
   - `<figcaption>`
