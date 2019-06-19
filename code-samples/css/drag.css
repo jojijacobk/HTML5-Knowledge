@@ -1,0 +1,9 @@
+#draggableItemsSection {
+    margin-bottom: 100px;
+    border: 5px solid rgb(221, 143, 40);
+}
+
+#droppableSection {
+    height: 100%;
+    border: 5px solid rgb(15.9%, 87%, 15.9%);
+}
