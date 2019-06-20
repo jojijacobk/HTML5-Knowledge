@@ -147,8 +147,19 @@ Then you add important bits of information by adding `itemprop` attributes like 
 </div>
 
 ```
-# Web Storage
-Web storage is a confusing term which means to store data in a user' computer. HTML5 gives tow kinds of web storage - **local storage** and **session storage**.
+# Browser Storage
+
+|Type of storage|Comments|
+|----------|-------------|
+|Cookies||
+|Objects in memory|Javascript objects holding data is in browser memory.|
+|Local storage / Session storage|It is blocking. It is not available inside web workers. |
+|IndexedDB | Web worker + indexedDB is a good combination as it doesn't block DOM. IndexedDB alone is blocking.|
+|Cache API||
+|Service workers|Cache API + Service worker is good combination|
+
+
+Storage in browser means to store data in a user' computer. HTML5 gives wo kinds of web storage - **local storage** and **session storage**.
 - **Cookies** can store only up to 4KB of data
 - Once a cookie is set, that will be sent to server along with all future HTTP requests
 - 5 MB of data can be saved using web storage
