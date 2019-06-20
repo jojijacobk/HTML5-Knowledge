@@ -151,11 +151,11 @@ Then you add important bits of information by adding `itemprop` attributes like 
 
 |Type of storage|Comments|
 |----------|-------------|
-|Cookies||
+|Cookies|Max size 4KB.|
 |Objects in memory|Javascript objects holding data is in browser memory.|
-|Local storage / Session storage|It is blocking. It is not available inside web workers. |
-|IndexedDB | Web worker + indexedDB is a good combination as it doesn't block DOM. IndexedDB alone is blocking.|
-|Cache API||
+|Local storage / Session storage|Max size is 5-10 MB. It is blocking. It is not available inside web workers. |
+|IndexedDB | Max size is as dictated by quota available for browser. It could be like half of free disk space.  Web worker + indexedDB is a good combination as it doesn't block DOM. IndexedDB alone is blocking.|
+|Cache API|You could check with Storage Manager interface of Storage API|
 |Service workers|Cache API + Service worker is good combination|
 
 
