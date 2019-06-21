@@ -75,6 +75,14 @@ Some of the new HTML5 semantic elements are:
 - `<section>` is preferrable for a block content that starts with a title
 - `<details>`
   - `<summary>`
+- `<audio>`
+- `<video>`
+- `<canvas>`
+- `<form>`
+  - `<legend>`
+  - `<fieldset>`
+  - `<label for="fname">`
+  - `<input name="fname" autofocus required>`
 
 ## Semantic elements for text information
 - `<time>`
