@@ -85,8 +85,10 @@ Some of the new HTML5 semantic elements are:
   - `<input name="fname" autofocus required>`
 
 <details>
+  
   <summary>Example of a form</summary>
-  ```html
+  
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,7 +112,7 @@ Some of the new HTML5 semantic elements are:
 </body>
 
 </html>
-  ```
+```
 </details>
 
 ## Semantic elements for text information
