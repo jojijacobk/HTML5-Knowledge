@@ -84,6 +84,35 @@ Some of the new HTML5 semantic elements are:
   - `<label for="fname">`
   - `<input name="fname" autofocus required>`
 
+<details>
+  <summary>Example of a form</summary>
+  ```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 Forms</title>
+</head>
+
+<body>
+  <section>
+      <h4>Contact Details</h4>
+      <fieldset>
+          <form name="contact-form">
+              <legend>Please enter your contact details</legend>
+              <label for="first-name">First Name <em>*</em></label> <input name="first-name" required>
+              <label for="age">Age</label> <input name="age" required autofocus>
+              <input type="submit" value="Send">
+          </form>
+      </fieldset>
+  </section>
+</body>
+
+</html>
+  ```
+</details>
+
 ## Semantic elements for text information
 - `<time>`
 ```html
