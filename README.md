@@ -200,12 +200,17 @@ Then you add important bits of information by adding `itemprop` attributes like 
 | Cache API                       | For Max size, you could check with Storage Manager interface of Storage API                                                                                                                           |
 | Service workers                 | Cache API + Service worker is good combination                                                                                                                                                        |
 
-Storage in browser means to store data in a user' computer. HTML5 gives wo kinds of web storage - **local storage** and **session storage**.
-- **Cookies** can store only up to 4KB of data
-- Once a cookie is set, that will be sent to server along with all future HTTP requests
-- 5 MB of data can be saved using web storage
-- both storage mechanisms store data using website domain name. So it doesn't work if you are loading web pages from disk.
-- every values are stored in text form.
+## 1. Cookies
+Cookies are tiny bits of text information stored on user's browser, generally used to track the user and user preferences. Two drawbacks of cookies are :
+- They are very much limited in size (4KB)
+- Once a cookie is set, which is then automatically posted to server by browser during each HTTP request.
+
+
+## 2. Local Storage / Session Storage
+
+- localStorage/sessionStorage offers 5 MB of data
+- localStorage/sessionStorage mechanisms store data using website domain name. So it doesn't work if you are loading web pages from disk.
+- every values are stored in string format.
 - any change to the storage in one browser window triggers an event `storage` to all other windows of same browser where this website is loaded. So it can be considered as a mechanism to update all windows of same browser via storage events. 
 
 `document.addEventListener('storage','storageChangeHandler');`
@@ -224,14 +229,8 @@ StorageEvent {
                   // depending on where the change happened.
 }
 ```
+**localStorage APIs**
 
-## 1. Cookies
-Cookies are tiny bits of information stored on user's browser, generally used to track the user and user preferences. Two drawbacks of cookies are :
-- They are very much limited in size 
-- They are posted to server with every browser request
-
-
-## 2. Local Storage
 ```javascript
 localStorage.setItem('name','joji');
 localStorage.getItem('name');
@@ -254,20 +253,28 @@ if (localStorage) {
 - It is also possible to get an item from local storage by:
 `localStorage.name` OR `localStorage['name']`
 
-## 3. Session Storage
-- `sessionStorage.getItem(key)`
+**sessionStorage APIs**
 - Session storage is similar to local storage, but session storage lasts only until browser window or tab is closed.
-- Two open tabs with same URL **doesn't share** `sessionStorage`. But, iframe or popup windows coming from same window shares sessionStorage.
+- - All APIs in localStorage are also available in sessionStorage. For eg: `sessionStorage.getItem(key)`
+- Two open tabs with same URL **cannot share** `sessionStorage`. But, iframe or popup windows coming from same window shares sessionStorage.
 
-# File API
-- The File API helps to read a file directly from hard drive and give the file data to JavaScript code. Earlier it was only possible through file upload to pass data into web server and , then pass down to browser client. 
-- The file obtained using File API to JavaScript could parse the data and send data to server using XMLHttpRequest.
+## 3. IndexedDB
+## 4. Service Worker (uses Cache API)
+It obsoleted **Cache Manifest**.
+## 5. File system API
+- Read from file system using FileList, File, Blob, FileReader
+- Write tofile system using FileWriter, Blob()
+
+
+# File system API
+- The File system API helps to read a file directly from hard drive and give the file data to JavaScript code. Earlier it was only possible through file upload to pass data into web server and , then pass down to browser client. 
+- The file obtained using File system API to JavaScript could parse the data and send data to server using XMLHttpRequest.
 - It is not possible to create a file in hard drive or change a file. But, you may store the file in localstorage.
-- With File API there are 3 strategies to read file.
+- With File system API there are 3 strategies to read file.
   - file input
   - a hidden file input, presented with a beautiful button
   - drag and drop file upload
-- File API works in tandem with FileReader to read file contents
+- File system API works in tandem with FileReader to read file contents
 - HTML5 file operation deals with the following objects.
   - FileList
   - File
