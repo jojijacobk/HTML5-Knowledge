@@ -40,8 +40,8 @@
 - As CSS is the only stylesheet language around, you don't need to specify type as text/css in HTML5.
 `<link href="style.css" rel="stylesheet">`
 
-#### Add Javascript
-- As javascript is the only scripting language of web, you don't need to specify type as text/javascript in HTML5.
+#### Add JavaScript
+- As JavaScript is the only scripting language of web, you don't need to specify type as text/javascript in HTML5.
 `<script src="index.js"> </script>`. The closing <script> tag is essential.
 
 # HTML5 Semantic Elements
@@ -189,14 +189,14 @@ Then you add important bits of information by adding `itemprop` attributes like 
 ```
 # Browser Storage
 
-|Type of storage|Comments|
-|----------|-------------|
-|Cookies|Max size 4KB.|
-|Objects in memory|Javascript objects holding data is in browser memory.|
-|Local storage / Session storage|Max size is 5-10 MB. It is blocking. It is not available inside web workers. |
-|IndexedDB | Max size is as dictated by quota available for browser. It could be like half of free disk space.  Web worker + indexedDB is a good combination as it doesn't block DOM. IndexedDB alone is blocking.|
-|Cache API|For Max size, you could check with Storage Manager interface of Storage API|
-|Service workers|Cache API + Service worker is good combination|
+| Type of storage                 | Comments                                                                                                                                                                                              |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cookies                         | Max size 4KB.                                                                                                                                                                                         |
+| Objects in memory               | JavaScript objects holding data is in browser memory.                                                                                                                                                 |
+| Local storage / Session storage | Max size is 5-10 MB. It is blocking. It is not available inside web workers.                                                                                                                          |
+| IndexedDB                       | Max size is as dictated by quota available for browser. It could be like half of free disk space.  Web worker + indexedDB is a good combination as it doesn't block DOM. IndexedDB alone is blocking. |
+| Cache API                       | For Max size, you could check with Storage Manager interface of Storage API                                                                                                                           |
+| Service workers                 | Cache API + Service worker is good combination                                                                                                                                                        |
 
 
 Storage in browser means to store data in a user' computer. HTML5 gives wo kinds of web storage - **local storage** and **session storage**.
@@ -259,8 +259,8 @@ if (localStorage) {
 - Two open tabs with same URL **doesn't share** `sessionStorage`. But, iframe or popup windows coming from same window shares sessionStorage.
 
 # File API
-- The File API helps to read a file directly from hard drive and give the file data to Javascript code. Earlier it was only possible through file upload to pass data into web server and , then pass down to browser client. 
-- The file obtained using File API to Javascript could parse the data and send data to server using XMLHttpRequest.
+- The File API helps to read a file directly from hard drive and give the file data to JavaScript code. Earlier it was only possible through file upload to pass data into web server and , then pass down to browser client. 
+- The file obtained using File API to JavaScript could parse the data and send data to server using XMLHttpRequest.
 - It is not possible to create a file in hard drive or change a file. But, you may store the file in localstorage.
 - With File API there are 3 strategies to read file.
   - file input
