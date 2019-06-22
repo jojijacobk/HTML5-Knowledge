@@ -1,29 +1,30 @@
 # HTML5 
-- is the future, and it started like a rebel,
-- which is **backed by WHATWG** (Web Hypertext Application Technology Working Group) which is a consortium of several companies like Opera, Mozilla, Apple, Google, Microsoft etc and it is confirmed as an HTML5 standard by **W3C**.
-- W3C has been endorsing XHTML for a long while, but it is then abandoned in favor of promoting HTML5, which is continuously being evolved by WHATWG. So WHATWG develops and W3C approves it as official HTML5 standard.
-- it supports all of HTML and XHTML too. So HTML5 is **fully backward compatible**.
-- use **HTML5 validator** to make sure that your webpage is HTML5 compliant.
-- tolerates
+- HTML5 is a living standard so every new updates coming over years in the future also would be titled as HTML5 (not as HTML6, HTML7 etc)
+- HTML5 is **backed by WHATWG** (Web Hypertext Application Technology Working Group) which is a consortium of several companies like Opera, Mozilla, Apple, Google, Microsoft etc. The proposals derived by WHATWG is reviewed and confirmed as the HTML5 standard by **W3C**.
+- W3C has been endorsing XHTML for a long while, but then they abandoned it in favor of promoting HTML5, which is continuously being evolved with help of WHATWG. So WHATWG develops and W3C approves it as official HTML5 standard.
+- HTML5 supports all of HTML and XHTML too. So HTML5 is **fully backward compatible**.
+- Use **HTML5 validators** to make sure that your webpage is HTML5 compliant.
+- HTML5 tolerates
   - capitalization of tags
   - unclosed tags & single closed tags (`<br/>, <br />, <br>`)
-  - if no quotes are put around attribute values like `<img src=cat.jpg>` if there is no breaking symbols in value such as `> < = space` etc.
-  - if attribute names comes without value like `<input type="checkbox" checked>`
-  - _presentational elements_ such as `<center>, <font>, <strike>` etc are not welcome in HTML5
-  - elements constitue 100 elements, where 30 are newly introduced, 10 are significantly improved.
-  - you can use _modernizer_ to identify if your HTML5 feature is available in a client browser and act accordingly.
-  - you can use _polyfills_ or _shims_ to simulate the missing HTML5 feature by some other means.
-  - `modernizer` was used for HTML5 feature detection in your browser.
+  - if no quotes are put around attribute values like `<img src=cat.jpg>`
+  - if there is no breaking symbols in value such as `> < = space` etc.
+  - if attribute names comes without a value like `<input type="checkbox" checked>`
+- HTML4 _presentational elements_ such as `<center>, <font>, <strike>` etc are not welcome in HTML5
+- HTML5 elements constitue 116 elements today (2019), where more than 30 are newly introduced, some HTML4 tags are significantly improved.
+- You can use _modernizer_ to identify if an HTML5 feature is available in a client browser and act accordingly.
+- You can use _polyfills_ or _shims_ to simulate the missing HTML5 feature by some other means.
 
 #### Doctype
-- doctype of an HTML5 document is defined by `<!DOCTYPE html>`. 
+- Doctype of an HTML5 document is defined by `<!DOCTYPE html>`. 
   - By setting a doctype you are forcing all browsers (legacy ones and modern ones) to strictly follow the standard browser behavior for your html. So your html would look consistent across everywhere. If doctype is missing some older browsers may run on quirks mode, which may give undesirable effects on font size, layout etc.
 
 #### Character encoding
-- if you do not specify a character encoding, browser will assume something. It is always safe to instruct what character encoding does your file stands for. 
-- You can specify this in HTML5 using `<meta charset="utf-8">`. 
+- If you do not specify a character encoding, browser will assume something. It is always safe to instruct what character encoding does your file stands for. 
+- In order to specify character encoding in HTML5 use `<meta charset="utf-8">`.
+- You should always put the character encoding in the first 512 bytes of HTML file. So, it is recommended to put `charset` as the first element inside `<head>` tag.
 - When you save the file, choose utf-8 as character encoding for that file.
-- You should always put the character encoding in the first 512 bytes of HTML file. So I recomment to put charset as first meta tag.
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -33,14 +34,14 @@
 ```
 
 #### Language
-- It is good to specify natural language of your web page by specifying `lang` attribute of html element as `<html lang="en">`. This helps search engines and screen readers to understand language of your file. In case if you have a different language in some section of your page, then enclose that element using `lang` attribute. For eg: `<div lang="ml">` for a malayalam web page.
+- It is good to specify natural language of your web page by specifying `lang` attribute of html element as `<html lang="en">`. This helps search engines and screen readers to understand language of your file. In case if you have a different language in some section of your page, then enclose that element using `lang` attribute. For eg: `<div lang="ml">` for a malayalam section of web page.
 
 #### Add stylesheet
-- As CSS is the only stylesheet language around, you don't need to specify type as text/css as in older HTML versions.
+- As CSS is the only stylesheet language around, you don't need to specify type as text/css in HTML5.
 `<link href="style.css" rel="stylesheet">`
 
 #### Add Javascript
-- As javascript is the only scripting language of web, you don't need to explicitly mention that.
+- As javascript is the only scripting language of web, you don't need to specify type as text/javascript in HTML5.
 `<script src="index.js"> </script>`. The closing <script> tag is essential.
 
 # HTML5 Semantic Elements
