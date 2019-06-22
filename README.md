@@ -2,15 +2,13 @@
 - HTML5 is a living standard so every new updates coming over years in the future also would be titled as HTML5 (not as HTML6, HTML7 etc)
 - HTML5 is **backed by WHATWG** (Web Hypertext Application Technology Working Group) which is a consortium of several companies like Opera, Mozilla, Apple, Google, Microsoft etc. The proposals derived by WHATWG is reviewed and confirmed as the HTML5 standard by **W3C**.
 - W3C has been endorsing XHTML for a long while, but then they abandoned it in favor of promoting HTML5, which is continuously being evolved with help of WHATWG. So WHATWG develops and W3C approves it as official HTML5 standard.
-- HTML5 supports all of HTML and XHTML too. So HTML5 is **fully backward compatible**.
+- HTML5 supports all of HTML and XHTML too. So HTML5 is **fully backward compatible**. But, some HTML4 _presentational elements_ such as `<center>, <font>, <strike>` etc are not welcome in HTML5.
 - Use **HTML5 validators** to make sure that your webpage is HTML5 compliant.
 - HTML5 tolerates
   - capitalization of tags
   - unclosed tags & single closed tags (`<br/>, <br />, <br>`)
   - if no quotes are put around attribute values like `<img src=cat.jpg>`
-  - if there is no breaking symbols in value such as `> < = space` etc.
   - if attribute names comes without a value like `<input type="checkbox" checked>`
-- HTML4 _presentational elements_ such as `<center>, <font>, <strike>` etc are not welcome in HTML5
 - HTML5 elements constitue 116 elements today (2019), where more than 30 are newly introduced, some HTML4 tags are significantly improved.
 - You can use _modernizer_ to identify if an HTML5 feature is available in a client browser and act accordingly.
 - You can use _polyfills_ or _shims_ to simulate the missing HTML5 feature by some other means.
@@ -42,7 +40,7 @@
 
 #### Add JavaScript
 - As JavaScript is the only scripting language of web, you don't need to specify type as text/javascript in HTML5.
-`<script src="index.js"> </script>`. The closing <script> tag is essential.
+`<script src="index.js"> </script>`. The closing `<script>` tag is essential.
 
 # HTML5 Semantic Elements
 With the advent of HTML5, semantics of elements used to construct a web page gathered huge significance. HTML5 introduced semantical tags for good **page structure** as well as tags to signify **text information**.
@@ -56,7 +54,7 @@ With the advent of HTML5, semantics of elements used to construct a web page gat
 |<img src="attachments/01.png" width="650"> |
 
 <details>
-  <summary>Example</summary>
+  <summary>Click here to see more examples</summary>
   
 |Example|
 |------|
@@ -67,7 +65,7 @@ With the advent of HTML5, semantics of elements used to construct a web page gat
 
 </details>
 
-Some of the new HTML5 semantic elements are:
+Some of the HTML5 semantic elements are:
 - `<figure>`
   - `<figcaption>`
 - `<aside>`
@@ -76,14 +74,16 @@ Some of the new HTML5 semantic elements are:
 - `<section>` is preferrable for a block content that starts with a title
 - `<details>`
   - `<summary>`
-- `<audio>`
-- `<video>`
-- `<canvas>`
 - `<form>`
   - `<legend>`
   - `<fieldset>`
   - `<label for="fname">`
   - `<input name="fname" autofocus required>`
+
+HTML5 multimedia elements include:
+- `<audio>`
+- `<video>`
+- `<canvas>`
 
 <details>
   
@@ -183,21 +183,22 @@ Then you add important bits of information by adding `itemprop` attributes like 
 ```html
 <div itemscope itemtype="http://schema.org/Person">
     <h3 itemprop="name">Mike Rowe</h3>
-    You can see Mike Rowe's website at <a itemprop="url" href="http://www.magicsemantics.com">www.magicsemantics.com</a>
+    You can see Mike Rowe's website at 
+    <a itemprop="url" href="http://www.magicsemantics.com">www.magicsemantics.com</a>
 </div>
 
 ```
 # Browser Storage
 
+
 | Type of storage                 | Comments                                                                                                                                                                                              |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cookies                         | Max size 4KB.                                                                                                                                                                                         |
-| Objects in memory               | JavaScript objects holding data is in browser memory.                                                                                                                                                 |
+| Cookies                         | Max size 4KB                                                                                                                                                                                          |
+| Objects in memory               | JavaScript objects that holds data resides in browser memory.                                                                                                                                         |
 | Local storage / Session storage | Max size is 5-10 MB. It is blocking. It is not available inside web workers.                                                                                                                          |
 | IndexedDB                       | Max size is as dictated by quota available for browser. It could be like half of free disk space.  Web worker + indexedDB is a good combination as it doesn't block DOM. IndexedDB alone is blocking. |
 | Cache API                       | For Max size, you could check with Storage Manager interface of Storage API                                                                                                                           |
 | Service workers                 | Cache API + Service worker is good combination                                                                                                                                                        |
-
 
 Storage in browser means to store data in a user' computer. HTML5 gives wo kinds of web storage - **local storage** and **session storage**.
 - **Cookies** can store only up to 4KB of data
