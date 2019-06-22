@@ -191,14 +191,15 @@ Then you add important bits of information by adding `itemprop` attributes like 
 # Browser Storage
 
 
-| Type of storage                 | Comments                                                                                                                                                                                              |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cookies                         | Max size 4KB                                                                                                                                                                                          |
-| Objects in memory               | JavaScript objects that holds data resides in browser memory.                                                                                                                                         |
-| Local storage / Session storage | Max size is 5-10 MB. It is blocking. It is not available inside web workers.                                                                                                                          |
+| Type of storage                 | Comments |
+|---------------------------------|--------------------------------- |
+| Cookies                         | Max size 4KB |
+| Objects in memory               | JavaScript objects that holds data resides in browser memory. |
+| Local storage / Session storage | Max size is 5-10 MB. It is blocking. It is not available inside web workers. |
 | IndexedDB                       | Max size is as dictated by quota available for browser. It could be like half of free disk space.  Web worker + indexedDB is a good combination as it doesn't block DOM. IndexedDB alone is blocking. |
-| Cache API                       | For Max size, you could check with Storage Manager interface of Storage API                                                                                                                           |
-| Service workers                 | Cache API + Service worker is good combination                                                                                                                                                        |
+| Cache API                       | For Max size, you could check with Storage Manager interface of Storage API |
+| Service workers                 | Cache API + Service worker is good combination |
+
 
 Storage in browser means to store data in a user' computer. HTML5 gives wo kinds of web storage - **local storage** and **session storage**.
 - **Cookies** can store only up to 4KB of data
