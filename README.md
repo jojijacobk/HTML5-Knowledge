@@ -1,3 +1,28 @@
+ * [HTML5](README.md#html5)
+            * [Doctype](README.md#doctype)
+            * [Character encoding](README.md#character-encoding)
+            * [Language](README.md#language)
+            * [Add stylesheet](README.md#add-stylesheet)
+            * [Add JavaScript](README.md#add-javascript)
+   * [HTML5 Semantic Elements](README.md#html5-semantic-elements)
+      * [Semantic elements for page structuring](README.md#semantic-elements-for-page-structuring)
+      * [Semantic elements for text information](README.md#semantic-elements-for-text-information)
+      * [Semantics obtained from standards other than HMLT5](README.md#semantics-obtained-from-standards-other-than-hmlt5)
+         * [1. ARIA - Accessibility Rich Internet Applications](README.md#1-aria---accessibility-rich-internet-applications)
+         * [2. RDFa - Resource Description Framework](README.md#2-rdfa---resource-description-framework)
+         * [3. Microformat](README.md#3-microformat)
+         * [4. Microdata](README.md#4-microdata)
+   * [Browser Storage](README.md#browser-storage)
+      * [1. Cookies](README.md#1-cookies)
+      * [2. Local Storage / Session Storage](README.md#2-local-storage--session-storage)
+      * [3. IndexedDB](README.md#3-indexeddb)
+      * [4. Service Worker (uses Cache API)](README.md#4-service-worker-uses-cache-api)
+      * [5. File system API](README.md#5-file-system-api)
+   * [File system API](README.md#file-system-api)
+   * [Drag &amp; Drop](README.md#drag--drop)
+   * [History API](README.md#history-api)
+
+
 # HTML5 
 - HTML5 is a living standard so every new updates coming over years in the future also would be titled as HTML5 (not as HTML6, HTML7 etc)
 - HTML5 is **backed by WHATWG** (Web Hypertext Application Technology Working Group) which is a consortium of several companies like Opera, Mozilla, Apple, Google, Microsoft etc. The proposals derived by WHATWG is reviewed and confirmed as the HTML5 standard by **W3C**.
@@ -189,14 +214,14 @@ Then you add important bits of information by adding `itemprop` attributes like 
 # Browser Storage
 
 
-| Type of storage                 | Comments |
-|---------------------------------|--------------------------------- |
-| Cookies                         | Max size 4KB |
-| Objects in memory               | JavaScript objects that holds data resides in browser memory. |
-| Local storage / Session storage | Max size is 5-10 MB. It is blocking. It is not available inside web workers. |
+| Type of storage                 | Comments                                                                                                                                                                                              |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cookies                         | Max size 4KB                                                                                                                                                                                          |
+| Objects in memory               | JavaScript objects that holds data resides in browser memory.                                                                                                                                         |
+| Local storage / Session storage | Max size is 5-10 MB. It is blocking. It is not available inside web workers.                                                                                                                          |
 | IndexedDB                       | Max size is as dictated by quota available for browser. It could be like half of free disk space.  Web worker + indexedDB is a good combination as it doesn't block DOM. IndexedDB alone is blocking. |
-| Cache API                       | For Max size, you could check with Storage Manager interface of Storage API |
-| Service workers                 | Cache API + Service worker is good combination |
+| Cache API                       | For Max size, you could check with Storage Manager interface of Storage API                                                                                                                           |
+| Service workers                 | Cache API + Service worker is good combination                                                                                                                                                        |
 
 
 ## 1. Cookies
