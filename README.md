@@ -51,7 +51,7 @@ With the advent of HTML5, semantics of elements used to construct a web page gat
 |Semantical page structure|
 |------|
 |An example of a good page structure|
-|<img src="attachments/01.png" width="650"> |
+|<img src="attachments/01.png" width="450"> |
 
 <details>
   <summary>Click here to see more examples</summary>
@@ -59,9 +59,9 @@ With the advent of HTML5, semantics of elements used to construct a web page gat
 |Example|
 |------|
 |A detailed sample of a good page structure|
-|<img src="attachments/02.png" width="650"> |
+|<img src="attachments/02.png" width="550"> |
 |A detailed sample of a bad page structure|
-|<img src="attachments/03.png" width="650"> |
+|<img src="attachments/03.png" width="550"> |
 
 </details>
 
@@ -85,9 +85,7 @@ HTML5 multimedia elements include:
 - `<video>`
 - `<canvas>`
 
-<details>
-  
-  <summary>Example of a form</summary>
+**Example for a semantic form**
   
 ```html
 <!DOCTYPE html>
