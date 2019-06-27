@@ -1,9 +1,4 @@
- * [HTML5](README.md#html5)
-            * [Doctype](README.md#doctype)
-            * [Character encoding](README.md#character-encoding)
-            * [Language](README.md#language)
-            * [Add stylesheet](README.md#add-stylesheet)
-            * [Add JavaScript](README.md#add-javascript)
+  * [HTML5](README.md#html5)
    * [HTML5 Semantic Elements](README.md#html5-semantic-elements)
       * [Semantic elements for page structuring](README.md#semantic-elements-for-page-structuring)
       * [Semantic elements for text information](README.md#semantic-elements-for-text-information)
@@ -22,7 +17,6 @@
    * [Drag &amp; Drop](README.md#drag--drop)
    * [History API](README.md#history-api)
 
-
 # HTML5 
 - HTML5 is a living standard so every new updates coming over years in the future also would be titled as HTML5 (not as HTML6, HTML7 etc)
 - HTML5 is **backed by WHATWG** (Web Hypertext Application Technology Working Group) which is a consortium of several companies like Opera, Mozilla, Apple, Google, Microsoft etc. The proposals derived by WHATWG is reviewed and confirmed as the HTML5 standard by **W3C**.
@@ -38,11 +32,11 @@
 - You can use _modernizer_ to identify if an HTML5 feature is available in a client browser and act accordingly.
 - You can use _polyfills_ or _shims_ to simulate the missing HTML5 feature by some other means.
 
-#### Doctype
+**Doctype**
 - Doctype of an HTML5 document is defined by `<!DOCTYPE html>`. 
   - By setting a doctype you are forcing all browsers (legacy ones and modern ones) to strictly follow the standard browser behavior for your html. So your html would look consistent across everywhere. If doctype is missing some older browsers may run on quirks mode, which may give undesirable effects on font size, layout etc.
 
-#### Character encoding
+**Character encoding**
 - If you do not specify a character encoding, browser will assume something. It is always safe to instruct what character encoding does your file stands for. 
 - In order to specify character encoding in HTML5 use `<meta charset="utf-8">`.
 - You should always put the character encoding in the first 512 bytes of HTML file. So, it is recommended to put `charset` as the first element inside `<head>` tag.
@@ -56,14 +50,14 @@
 </head>
 ```
 
-#### Language
+**Language**
 - It is good to specify natural language of your web page by specifying `lang` attribute of html element as `<html lang="en">`. This helps search engines and screen readers to understand language of your file. In case if you have a different language in some section of your page, then enclose that element using `lang` attribute. For eg: `<div lang="ml">` for a malayalam section of web page.
 
-#### Add stylesheet
+**Add stylesheet**
 - As CSS is the only stylesheet language around, you don't need to specify type as text/css in HTML5.
 `<link href="style.css" rel="stylesheet">`
 
-#### Add JavaScript
+**Add JavaScript**
 - As JavaScript is the only scripting language of web, you don't need to specify type as text/javascript in HTML5.
 `<script src="index.js"> </script>`. The closing `<script>` tag is essential.
 
