@@ -425,3 +425,6 @@ stopDefaultBehavior(ev) {
   - `history.replaceState(stateObject, title, URL)` - replaces current element in history with the new URL
 - history change fires `popstate` event. This is fired only when either a `back()` or `forward()` or `go()` is called. When `pushState()` or `replaceState()` happens, this event is not fired.
 - When `back()` or `forward()` or `go()` is called, the location.href value (address bar URL) is updated but actual content for that URL is not loaded. So, you will have to call content via AJAX by listening to `popstate` event.
+
+# References
+- [List of all HTML Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
